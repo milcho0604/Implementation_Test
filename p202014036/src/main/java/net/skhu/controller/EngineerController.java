@@ -16,7 +16,12 @@ public class EngineerController {
 
     @RequestMapping("exam1")
     public List<Engineer> exam1() {
-        return engineerRepository.findAllByOrderByIdAsc();
+        return engineerRepository.findAll();
+    }
+
+    @RequestMapping("exam2")
+    public List<Engineer> exam2() {
+        return engineerRepository.findByRoleId(1);
     }
 
     @RequestMapping("exam3")

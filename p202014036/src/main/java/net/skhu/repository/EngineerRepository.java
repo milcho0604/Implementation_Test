@@ -17,5 +17,6 @@ public interface EngineerRepository extends JpaRepository<Engineer, Integer> {
     List<Engineer> findByOrderByName();
     List<Engineer> findByOrderByNameDesc();
     List<Engineer> findByRoleIdOrderByNameDesc(int id);
+    List<Engineer> findByRoleId(int id);
 
 }
