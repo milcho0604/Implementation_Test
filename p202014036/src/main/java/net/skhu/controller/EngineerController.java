@@ -11,28 +11,32 @@ import net.skhu.repository.EngineerRepository;
 
 @RestController
 public class EngineerController {
-    @Autowired
-    private EngineerRepository engineerRepository;
+	@Autowired
+	private EngineerRepository engineerRepository;
 
-    @RequestMapping("exam1")
-    public List<Engineer> exam1() {
-        return engineerRepository.findAll();
-    }
+	@RequestMapping("exam1")
+	public List<Engineer> exam1() {
+		return engineerRepository.findAll();
+	}
 
-    @RequestMapping("exam2")
-    public List<Engineer> exam2() {
-        return engineerRepository.findByRoleId(1);
-    }
+	@RequestMapping("exam2")
+	public List<Engineer> exam2() {
+		return engineerRepository.findByRoleId(1);
+	}
 
-    @RequestMapping("exam3")
-    public List<Engineer> exam3() {
-        return engineerRepository.findByNameStartsWith("이");
-    }
+	@RequestMapping("exam3")
+	public List<Engineer> exam3() {
+		return engineerRepository.findByNameStartsWith("이");
+	}
 
-    @RequestMapping("exam4")
-    public List<Engineer> exam4() {
-        return engineerRepository.findByNameStartsWith("이");
-    }
+	@RequestMapping("exam4")
+	public List<Engineer> exam4() {
+		return engineerRepository.findByProEngineer(1);
+	}
 
+	@RequestMapping("exam5")
+	public List<Engineer> exam5() {
+		return engineerRepository.findByManaEngineer(2);
+	}
 
 }

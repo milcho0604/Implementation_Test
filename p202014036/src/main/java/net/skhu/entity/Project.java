@@ -2,8 +2,6 @@ package net.skhu.entity;
 
 import java.util.List;
 
-import org.apache.catalina.Manager;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
@@ -36,7 +34,7 @@ public class Project {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy="project")
-    List<Assignment> Assignments;
+    List<Assignment> assignment;
 
 
 }

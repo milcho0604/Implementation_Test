@@ -29,6 +29,6 @@ public class Manager {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy="manager")
-    List<Project> projects;
+    List<Project> project;
 
 }

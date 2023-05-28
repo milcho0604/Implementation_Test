@@ -26,6 +26,6 @@ public class Role {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy="role")
-    List<Engineer> engineers;
+    List<Engineer> engineer;
 
 }
