@@ -23,8 +23,8 @@ public interface EngineerRepository extends JpaRepository<Engineer, Integer> {
     @Query("SELECT e FROM Engineer e JOIN e.assignment a WHERE a.project.id = :projectId")
     List<Engineer> findByProEngineer(int projectId);
     // exam 5
-    @Query("SELECT e FROM Engineer e JOIN e.assignment a WHERE a.project.id = :projectId")
-    List<Engineer>findByManaEngineer(int projectId);
+    @Query("SELECT e FROM Engineer e JOIN e.assignment a JOIN a.project p WHERE p.manager.id = :managerId")
+    List<Engineer>findByManaEngineer(int managerId);
 }
 
 
