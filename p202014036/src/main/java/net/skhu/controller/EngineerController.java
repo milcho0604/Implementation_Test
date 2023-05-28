@@ -29,5 +29,10 @@ public class EngineerController {
         return engineerRepository.findByNameStartsWith("이");
     }
 
+    @RequestMapping("exam4")
+    public List<Engineer> exam4() {
+        return engineerRepository.findByNameStartsWith("이");
+    }
+
 
 }
